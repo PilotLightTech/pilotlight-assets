@@ -3,7 +3,6 @@
     "format": "pilot_light_scene",
     "dependencies": ["../assets/gltf-samples"],
     "app": {
-        "bShowPilotLightTool": true,
         "bContinuousBVH": false,
         "bShowBVH": false,
         "bShowDebugLights": true,

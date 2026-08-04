@@ -1,0 +1,129 @@
+{
+    "version": 1,
+    "format": "pilot_light_scene",
+    "app": {
+        "bContinuousBVH": false,
+        "bShowBVH": false,
+        "bShowDebugLights": true,
+        "bPhysicsDebugDraw": false,
+        "bDrawAllBoundingBoxes": false,
+        "bFrustumCulling": true,
+        "bMSAA": false,
+        "szIndexBufferSize": 64000000,
+        "szVertexBufferSize": 64000000,
+        "szDataBufferSize": 64000000,
+        "szMaterialBufferSize": 8000000,
+        "szSkinBufferSize": 8000000
+    },
+    "debug": {
+        "bWireframe": false,
+        "bShowProbes": false,
+        "bShowProbeRange": false,
+        "bShowOrigin": false
+    },
+    "editor": {
+        "bShowSelectedBoundingBox": false,
+        "bShowGrid": false,
+        "fGridCellSize": 0.025,
+        "fGridMinPixelsBetweenCells": 2.0,
+        "tGridColorThin": [0.5, 0.5, 0.5, 1.0],
+        "tGridColorThick": [0.75, 0.75, 0.75, 1.0]
+    },
+    "view": {
+        "camera": {
+            "tPosition": [-3.539, 2.003, 3.640],
+            "fYFov": 1.04719755,
+            "fNearZ": 0.1,
+            "fFarZ": 50.0,
+            "fPitch": -0.395,
+            "fYaw": 2.436
+        },
+        "renderer": {
+            "lighting": {
+                "tFlags": [
+                    "PL_RENDERER_LIGHTING_FLAGS_IMAGE_BASED",
+                    "PL_RENDERER_LIGHTING_FLAGS_NORMAL_MAPPING",
+                    "PL_RENDERER_LIGHTING_FLAGS_PUNCTUAL_LIGHTS",
+                ]
+            },
+            "sky": {
+                "tSunColor": [1.0, 0.95, 0.85],
+                "tSunDirection": [0.0, -0.1, -0.9],
+                "fSunIntensity": 1.0,
+                "uShadowCascadeCount": 4,
+                "uShadowResolution": 2048,
+                "tMode": "PL_RENDERER_SKY_MODE_SKYBOX",
+                "tFlags": [
+                    "PL_RENDERER_SKY_FLAGS_SHADOWS"
+                ],
+                "acSkyboxPath": "/assets/core/environments/sky.hdr",
+                "uSkyboxResolution": 1024
+            },
+            "shadows": {
+                "tFlags": [
+                    "PL_RENDERER_SHADOW_FLAGS_MULTI_VIEWPORT",
+                    "PL_RENDERER_SHADOW_FLAGS_PCF"
+                ],
+                "fMaxShadowRange": 100.0,
+                "fConstantDepthBias": -1.250,
+                "fSlopeDepthBias": -10.750
+            },
+            "bloom": {
+                "active" : false,
+                "fStrength": 0.05,
+                "fRadius": 1.5,
+                "uChainLength": 5
+            },
+            "tonemap": {
+                "tMode": "PL_TONEMAP_MODE_KHRONOS_PBR_NEUTRAL",
+                "fExposure": 1.0,
+                "fBrightness": 0.0,
+                "fContrast": 1.0,
+                "fSaturation": 1.0
+            }
+        }
+    },
+    "assets": {
+        "models": {
+            "GLTF MODEL 0":{
+                "path": "/assets/gltf-samples/Models/CompareIor/glTF/CompareIor.gltf"
+            },
+            "GLTF MODEL 1":{
+                "path": "/assets/gltf-samples/Models/IORTestGrid/glTF/IORTestGrid.gltf"
+            }
+        }
+    },
+    "scene": {
+        "probes": [
+            {
+                "active": true,
+                "tPosition": [0.0, 3.0, 0.0],
+                "fRange": 30.0,
+                "uResolution": 128,
+                "uSamples": 1024,
+                "uInterval": 6,
+                "tFlags": ["PL_ENVIRONMENT_PROBE_FLAGS_INCLUDE_SKY"]
+            }
+        ],
+        "entities": [
+            {
+                "active": true,
+                "model": "GLTF MODEL 0",
+                "transform": {
+                    "scale": [1.0, 1.0, 1.0],
+                    "translation": [0.0, 0.0, 0.0],
+                    "rotation": [0.0, 0.0, 0.0, 1.0]
+                }
+            },
+            {
+                "active": true,
+                "model": "GLTF MODEL 1",
+                "transform": {
+                    "scale": [3.0, 3.0, 3.0],
+                    "translation": [3.0, 0.0, 0.0],
+                    "rotation": [0.0, 0.0, 0.0, 1.0]
+                }
+            }
+        ]
+    }
+}
