@@ -1,0 +1,10 @@
+{    
+    "file_format": "pltexture", 
+    "version": 1, 
+    "type": "2d", 
+    "color_space": "srgb", 
+    "format": "PL_FORMAT_BC3_UNORM", 
+    "generate_mips": true, 
+    "compress": true, 
+    "source": "/resources/texture_resources/grass_mask.png"
+}

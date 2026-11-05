@@ -1,0 +1,97 @@
+{    
+    "format": "plscene", 
+    "version": 1, 
+    "entities": [
+        {            
+            "id": 117118, 
+            "tag": {                
+                "name": "settings"
+            }, 
+            "environment": {                
+                "environment": "/assets/environments/skybox.plenvironment"
+            }, 
+            "renderer": {                
+                "renderer": "/assets/settings/default.plrenderer"
+            }
+        },
+        {            
+            "id": 43987, 
+            "tag": {                
+                "name": "Car"
+            }, 
+            "library": {                
+                "library": "/assets/models/CarConcept_0.plscene"
+            }
+        },
+        {            
+            "id": 1, 
+            "tag": {                
+                "name": "Floor"
+            }, 
+            "transform": {                
+                "translation": [ 0, 0, 0 ], 
+                "rotation": [ 0, 0, 0, 1 ], 
+                "scale": [ 10, 1, 10 ]
+            }, 
+            "object": {                
+                "mesh": "/assets/meshes/plane.plmesh", 
+                "first_submesh": 0, 
+                "submesh_count": 1, 
+                "transform": 1, 
+                "casts_shadow": true, 
+                "receives_shadow": true, 
+                "renderable": true
+            }
+        },
+        {            
+            "id": 2, 
+            "tag": {                
+                "name": "Main Camera"
+            }, 
+            "script": {                
+                "file": "pl_script_camera", 
+                "playing": true, 
+                "play_once": false, 
+                "reloadable": true
+            }, 
+            "camera": {                
+                "projection": "perspective", 
+                "position": [ -4.5115824237248159, 4.8302014847174393, 4.2992954429215757 ], 
+                "near": 0.100000001, 
+                "far": 75, 
+                "pitch": -0.34499988, 
+                "yaw": 2.32099986, 
+                "roll": 0, 
+                "yfov": 1.04719698
+            }
+        },
+        {            
+            "id": 3, 
+            "tag": {                
+                "name": "Probe 0"
+            }, 
+            "transform": {                
+                "translation": [ 0, 5, 0 ], 
+                "rotation": [ 0, 0, 0, 1 ], 
+                "scale": [ 1, 1, 1 ]
+            }, 
+            "object": {                
+                "mesh": "/assets/meshes/probe.plmesh", 
+                "first_submesh": 0, 
+                "submesh_count": 1, 
+                "transform": 3, 
+                "casts_shadow": false, 
+                "receives_shadow": true, 
+                "renderable": true
+            }, 
+            "probe": {                
+                "resolution": 128, 
+                "samples": 128, 
+                "interval": 1, 
+                "range": 30, 
+                "realtime": false, 
+                "include_sky": true
+            }
+        }
+    ]
+}
